@@ -1,69 +1,198 @@
-import Image from "next/image";
+const places = [
+  {
+    name: "Aroma Iman Bistro",
+    area: "Damansara",
+    rating: "4.7",
+    reviews: "254",
+    distance: "1.2 km",
+    badge: "Halal Certified",
+  },
+  {
+    name: "Suka Sucre",
+    area: "Mont Kiara",
+    rating: "4.6",
+    reviews: "98",
+    distance: "1.6 km",
+    badge: "Muslim-Owned",
+  },
+  {
+    name: "The Kaffe Klub",
+    area: "TTDI",
+    rating: "4.4",
+    reviews: "126",
+    distance: "1.8 km",
+    badge: "Information Available",
+  },
+  {
+    name: "Nasi Lemak Royale",
+    area: "Kuala Lumpur",
+    rating: "4.6",
+    reviews: "328",
+    distance: "350 m",
+    badge: "Halal Certified",
+  },
+];
+
+const categories = [
+  ["🍴", "Restoran"],
+  ["✓", "Halal Check"],
+  ["🕌", "Masjid"],
+  ["✈", "Travel"],
+  ["🛍", "Produk"],
+  ["•••", "Lainnya"],
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main>
+      <header className="site-header">
+        <a className="logo" href="/">
+          syumul
+        </a>
+
+        <nav>
+          <a href="#discover">Discover</a>
+          <a href="#halal-check">Halal Check</a>
+          <a href="#places">Places</a>
+          <a href="#travel">Travel</a>
+          <a href="#learn">Learn</a>
+          <a href="#business">For Business</a>
+        </nav>
+
+        <div className="header-actions">
+          <button className="btn btn-outline">Log in</button>
+          <button className="btn btn-primary">Sign up</button>
+        </div>
+      </header>
+
+      <section className="hero">
+        <div className="hero-copy">
+          <div className="eyebrow">EVERYTHING MUSLIM. IN ONE PLACE.</div>
+
+          <h1>
+            Panduan Muslim,
+            <br />
+            secara <span>menyeluruh.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p>
+            Cari tempat, semak status halal dan buat pilihan dengan yakin, di
+            mana jua anda berada.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+
+          <div className="search-box">
+            <span>⌕</span>
+            <input
+              placeholder="Cari restoran, produk, tempat dan banyak lagi..."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <button>⌕</button>
+          </div>
+
+          <div className="categories">
+            {categories.map(([icon, label]) => (
+              <button key={label} className="category">
+                <span className="category-icon">{icon}</span>
+                <small>{label}</small>
+              </button>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+
+        <div className="hero-visual">
+          <div className="scribble">syumul</div>
+
+          <div className="phone">
+            <div className="phone-top">
+              <span className="mini-logo">syumul</span>
+              <span>⌕</span>
+            </div>
+
+            <p className="location">Kuala Lumpur⌄</p>
+
+            <div className="mini-search">Cari tempat, makanan, produk...</div>
+
+            <div className="mini-categories">
+              <span>🍴</span>
+              <span>✓</span>
+              <span>🕌</span>
+              <span>✈</span>
+            </div>
+
+            <h3>Berhampiran anda</h3>
+
+            <div className="phone-card">
+              <div className="phone-image" />
+              <div>
+                <strong>Nasi Lemak Royale</strong>
+                <p>Kuala Lumpur</p>
+                <small>⭐ 4.6 (328)</small>
+              </div>
+            </div>
+
+            <h3>Syumul Picks</h3>
+
+            <div className="phone-row">
+              <div className="mini-tile" />
+              <div className="mini-tile" />
+            </div>
+          </div>
+
+          <div className="note">
+            ↖
+            <br />
+            Semak sebelum
+            <br />
+            anda pilih.
+          </div>
+        </div>
+      </section>
+
+      <section className="content-grid" id="discover">
+        <div className="discover-panel">
+          <div className="section-heading">
+            <h2>Terokai pilihan terbaik</h2>
+            <a href="#">Lihat semua</a>
+          </div>
+
+          <div className="cards">
+            {places.map((place, index) => (
+              <article className="place-card" key={place.name}>
+                <div className={`place-image image-${index + 1}`}>
+                  <span className="badge">{place.badge}</span>
+                </div>
+
+                <div className="place-content">
+                  <strong>{place.name}</strong>
+                  <p>{place.area}</p>
+
+                  <div className="place-meta">
+                    <span>
+                      ⭐ {place.rating} ({place.reviews})
+                    </span>
+                    <span>{place.distance}</span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <aside className="halal-panel" id="halal-check">
+          <div>
+            <h2>Halal Check</h2>
+            <p>
+              Imbas kod bar atau cari produk untuk semak status halal dengan
+              mudah.
+            </p>
+
+            <button className="btn btn-primary">Semak sekarang</button>
+          </div>
+
+          <div className="scanner-art">
+            <div className="barcode">|||| ||| |||| | |||</div>
+          </div>
+        </aside>
+      </section>
+    </main>
   );
 }

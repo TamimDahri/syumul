@@ -46,16 +46,22 @@ input {
   padding: 0 64px;
 }
 
-.logo,
-.mini-logo {
-  font-weight: 900;
-  letter-spacing: -3px;
-  color: var(--green);
+.logo {
+  justify-self: start;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  font-size: 48px;
-  justify-self: start;
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.mini-logo {
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--green);
 }
 
 nav {
@@ -508,9 +514,9 @@ h1 span {
     min-height: 76px;
   }
 
-  .logo {
-    font-size: 36px;
-  }
+  .logo img {
+  width: 125px;
+}
 
   .header-actions .btn-outline {
     display: none;
@@ -578,4 +584,9 @@ h1 span {
   .search-box {
     grid-template-columns: 34px 1fr 48px;
   }
+}
+
+.phone-logo {
+  width: 75px;
+  height: auto;
 }

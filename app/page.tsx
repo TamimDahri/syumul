@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const places = [
   {
     name: "Aroma Iman Bistro",
@@ -47,8 +49,14 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="logo" href="/">
-          syumul
-        </a>
+  <Image
+    src="/syumul-logo.png"
+    alt="Syumul"
+    width={180}
+    height={70}
+    priority
+  />
+</a>
 
         <nav>
           <a href="#discover">Discover</a>
@@ -103,7 +111,13 @@ export default function Home() {
 
           <div className="phone">
             <div className="phone-top">
-              <span className="mini-logo">syumul</span>
+              <Image
+  src="/syumul-logo.png"
+  alt="Syumul"
+  width={80}
+  height={30}
+  className="phone-logo"
+/>
               <span>⌕</span>
             </div>
 

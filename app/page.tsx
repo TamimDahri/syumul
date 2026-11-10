@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const CONTACT_EMAIL = "hello@syumul.com";
+const CONTACT_EMAIL = "developer@syumul.com";
 const contactHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-  "Apl berjenama Syumul",
+  "App berjenama Syumul",
 )}`;
 
 /* The Syumul petal (from the brand icon), drawn in a 100 × 116 box. */
@@ -99,7 +99,7 @@ const lattice: LatticePetal[] = [
   { label: "Tempat", col: 0, row: 1, live: true },
   { label: "Qurban", col: 2, row: -1 },
   { label: "Ustaz", col: 1, row: -2 },
-  { label: "Apl anda", col: -1, row: -2 },
+  { label: "App anda", col: -1, row: -2 },
   { label: "Wakaf", col: -2, row: -1 },
   { label: "Zakat", col: -2, row: 1 },
   { label: "Travel", col: 2, row: 1 },
@@ -116,7 +116,7 @@ function EcosystemLattice() {
       className="lattice"
       viewBox="0 0 464 604"
       role="img"
-      aria-label="Ekosistem Syumul: Solat, Quran, Halal dan Tempat kini tersedia; Qurban, Ustaz, Wakaf, Zakat, Travel, Masjid dan apl berjenama akan datang"
+      aria-label="Ekosistem Syumul: Solat, Quran, Halal dan Tempat kini tersedia; Qurban, Ustaz, Wakaf, Zakat, Travel, Masjid dan app berjenama akan datang"
     >
       {lattice.map((p) => {
         const x = cx + p.col * dx;
@@ -331,13 +331,13 @@ const whiteLabelPoints = [
   "Pilih modul: solat, Quran, halal, wakaf, qurban, kelas",
   "Diterbitkan di Google Play dan App Store atas nama anda",
   "Pengguna dan data kekal milik organisasi anda",
-  "Kemas kini enjin Syumul diterima secara automatik",
+  "Update Syumul engine diterima secara automatik",
 ];
 
 const steps = [
   { title: "Pilih modul", body: "Tentukan perkhidmatan yang jemaah atau pelanggan anda perlukan." },
-  { title: "Jenamakan", body: "Kongsi logo, warna dan nama apl. Kami sediakan reka bentuknya." },
-  { title: "Kami bina & terbitkan", body: "Apl anda dibina di atas enjin Syumul dan diterbitkan ke kedai apl." },
+  { title: "Jenamakan", body: "Kongsi logo, warna dan nama app. Kami sediakan reka bentuknya." },
+  { title: "Kami bina & terbitkan", body: "App anda dibina di atas Syumul engine dan diterbitkan ke Play Store dan App Store." },
   { title: "Lancar & kembangkan", body: "Tambah modul baharu apabila organisasi anda berkembang." },
 ];
 
@@ -376,12 +376,12 @@ export default function Home() {
           </a>
           <nav aria-label="Utama">
             <a href="#ekosistem">Ekosistem</a>
-            <a href="#apl">Apl Syumul</a>
-            <a href="#akan-datang">Akan datang</a>
+            <a href="#app">App Syumul</a>
+            <a href="#akan-datang">Coming soon</a>
             <a href="#white-label">Untuk organisasi</a>
           </nav>
           <a className="btn btn-primary btn-sm" href="#white-label">
-            Bina apl anda
+            Bina app anda
           </a>
         </div>
       </header>
@@ -391,27 +391,27 @@ export default function Home() {
         <section className="hero">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Apl induk Muslim</p>
+              <p className="eyebrow">Muslim super app</p>
               <h1>
-                Satu apl.
+                Satu app.
                 <br />
                 Seluruh kehidupan <span>Muslim.</span>
               </h1>
               <p className="lead">
                 Syumul menghimpunkan waktu solat, kiblat, al-Quran dan semakan
-                halal dalam satu apl. Enjin yang sama turut menggerakkan apl
-                berjenama untuk masjid, institusi dan perniagaan anda.
+                halal dalam satu app. Engine yang sama turut menggerakkan white-label app
+                untuk masjid, institusi dan perniagaan anda.
               </p>
               <div className="cta-row">
                 <a className="btn btn-primary" href="#ekosistem">
                   Lihat ekosistem <Icon name="arrow" size={18} />
                 </a>
                 <a className="btn btn-ghost" href="#white-label">
-                  Apl untuk organisasi
+                  App untuk organisasi
                 </a>
               </div>
               <p className="hero-note">
-                Akan datang ke Google Play dan App Store.
+                Coming soon on Google Play &amp; App Store.
               </p>
             </div>
             <div className="hero-visual">
@@ -429,16 +429,16 @@ export default function Home() {
               <h2>Satu ekosistem, kelopak demi kelopak.</h2>
               <p className="lead">
                 Setiap kelopak ialah satu perkhidmatan. Yang berisi sudah ada
-                dalam apl hari ini, yang bergaris sedang dibina. Setiap satu
-                boleh dipasang ke dalam apl Syumul atau apl berjenama anda
+                dalam app hari ini, yang bergaris sedang dibina. Setiap satu
+                boleh dipasang ke dalam app Syumul atau white-label app anda
                 sendiri.
               </p>
               <ul className="legend">
                 <li>
-                  <span className="dot live" /> Kini dalam apl
+                  <span className="dot live" /> Kini dalam app
                 </li>
                 <li>
-                  <span className="dot next" /> Akan datang
+                  <span className="dot next" /> Coming soon
                 </li>
               </ul>
             </div>
@@ -447,11 +447,11 @@ export default function Home() {
         </section>
 
         {/* Live today */}
-        <section className="section" id="apl">
+        <section className="section" id="app">
           <div className="wrap">
             <div className="section-head">
-              <p className="eyebrow">Kini dalam apl</p>
-              <h2>Dalam apl Syumul hari ini.</h2>
+              <p className="eyebrow">Kini dalam app</p>
+              <h2>Dalam app Syumul hari ini.</h2>
             </div>
             <div className="bento">
               {liveFeatures.map((f) => (
@@ -506,7 +506,7 @@ export default function Home() {
                     <h3>{u.title}</h3>
                     <p>{u.body}</p>
                   </div>
-                  <span className="pill">Akan datang</span>
+                  <span className="pill">Coming soon</span>
                 </li>
               ))}
             </ol>
@@ -518,11 +518,11 @@ export default function Home() {
           <div className="wrap">
             <div className="wl-grid">
               <div>
-                <p className="eyebrow on-dark">Syumul untuk organisasi</p>
-                <h2>Apl anda sendiri, dikuasakan Syumul.</h2>
+                <p className="eyebrow on-dark">White-label app</p>
+                <h2>App anda sendiri, dikuasakan Syumul.</h2>
                 <p className="lead">
                   Masjid, pusat zakat, institusi wakaf, bank, agensi umrah dan
-                  jenama halal boleh melancarkan apl berjenama sendiri tanpa
+                  jenama halal boleh melancarkan white-label app sendiri tanpa
                   membina dari kosong. Anda pilih modul, kami bina dan
                   terbitkan.
                 </p>
@@ -534,7 +534,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <a className="btn btn-light" href={contactHref}>
-                  Bincang apl anda <Icon name="arrow" size={18} />
+                  Bincang app anda <Icon name="arrow" size={18} />
                 </a>
               </div>
 
@@ -542,8 +542,8 @@ export default function Home() {
                 <div className="engine">
                   <Image src="/syumul-icon.png" alt="" width={56} height={56} />
                   <div>
-                    <strong>Enjin Syumul</strong>
-                    <small>Modul, kandungan dan kemas kini</small>
+                    <strong>Syumul engine</strong>
+                    <small>Modules, content & updates</small>
                   </div>
                 </div>
                 <div className="wl-lines" aria-hidden="true">
@@ -554,7 +554,7 @@ export default function Home() {
                 <div className="client-row">
                   <ClientPhone
                     name="Masjid Anda"
-                    kind="Apl jemaah"
+                    kind="App jemaah"
                     tone="t-teal"
                     modules={["Waktu solat", "Kuliah", "Tabung"]}
                   />
@@ -571,7 +571,7 @@ export default function Home() {
                     modules={["Semak halal", "Kedai", "Ganjaran"]}
                   />
                 </div>
-                <p className="wl-caption">Contoh ilustrasi</p>
+                <p className="wl-caption">Contoh sahaja</p>
               </div>
             </div>
 
@@ -622,7 +622,7 @@ export default function Home() {
           <div className="wrap closing-box">
             <HeroPetals />
             <div>
-              <h2>Bina apl Muslim anda di atas Syumul.</h2>
+              <h2>Bina app Muslim anda di atas Syumul.</h2>
               <p className="lead">
                 Ceritakan organisasi anda dan modul yang anda perlukan. Kami
                 akan hubungi anda semula.
@@ -649,8 +649,8 @@ export default function Home() {
           </div>
           <nav aria-label="Kaki">
             <a href="#ekosistem">Ekosistem</a>
-            <a href="#apl">Apl Syumul</a>
-            <a href="#akan-datang">Akan datang</a>
+            <a href="#app">App Syumul</a>
+            <a href="#akan-datang">Coming soon</a>
             <a href="#white-label">Untuk organisasi</a>
             <a href={contactHref}>{CONTACT_EMAIL}</a>
           </nav>

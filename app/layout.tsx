@@ -15,13 +15,13 @@ const jakarta = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://syumul.com"),
-  title: "Syumul — Apl induk untuk kehidupan Muslim",
+  title: "Syumul — App induk untuk kehidupan Muslim",
   description:
-    "Syumul menghimpunkan waktu solat, kiblat, al-Quran dan semakan halal dalam satu apl, serta menggerakkan apl berjenama untuk masjid, institusi dan perniagaan.",
+    "Syumul menghimpunkan waktu solat, kiblat, al-Quran dan semakan halal dalam satu app, serta menggerakkan app berjenama untuk masjid, institusi dan perniagaan.",
   openGraph: {
-    title: "Syumul — Satu apl. Seluruh kehidupan Muslim.",
+    title: "Syumul — Satu app. Seluruh kehidupan Muslim.",
     description:
-      "Apl induk Muslim dan platform apl berjenama (white-label) untuk organisasi.",
+      "Muslim super app dan platform app berjenama (white-label) untuk organisasi.",
     url: "https://syumul.com",
     siteName: "Syumul",
     locale: "ms_MY",
